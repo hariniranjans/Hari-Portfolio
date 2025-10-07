@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hari Niranjan S | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #3c3c40;
+      --card-color: #1c1c1e;
+      --text-color: #f3f3f3;
+      --accent: #a0e30f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--card-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 6rem auto;
+      padding: 0 2rem;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--accent);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 8rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #4f46e5;
+    }
+
+    .card {
+      background: var(--card-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--card-color);
+      color: #999;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h2>Hari Niranjan S</h2>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I’m Hari Niranjan S !</h1>
+    <p>B.Tech CSE student, Data Analyst intern, and AI/ML & Web Enthusiast who loves building data-driven and intelligent web applications.</p>
+    <div class="buttons">
+      <a href="mailto:harinjn1441@gmail.com" class="btn">Contact Me</a>
+      <a href="Hari Niranjan S.pdf" download class="btn">Download Resume</a>
+      <a href="https://www.linkedin.com/in/hariniranjans" target="_blank" class="btn">LinkedIn</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Seeking a Data Analyst position where I can leverage my technical expertise, analytical skills,
+ and problem-solving abilities to drive data-driven insights, support strategic decision-making,
+ and contribute to organizational success while advancing my professional growth.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Programming:</strong> Python, SQL, C, Linux</li>
+        <li><strong>Visualization:</strong> Excel (Advanced), Power BI</li>
+        <li><strong>Tools:</strong> SQL Developer, PL/SQL Developer, VS Code, GitHub</li>
+        <li><strong>Concepts:</strong> Data Cleansing, Data Quality, SLA Monitoring, Reporting</li>
+        <li><strong>Soft Skills:</strong> Problem Solving, Communication, Teamwork, Adaptability</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>AI-enhanced Podcast Platform</h3>
+      <p>Built an AI-powered SaaS platform with TTS, multi-voice AI, and automatic thumbnail generation.</p>
+      <small>Tech: Python, TTS libraries, React</small>
+    </div>
+    <div class="card">
+      <h3>Retrieval-Based ChatBot</h3>
+      <p>Developed an intelligent chatbot using web scraping and NLP for academic query support.</p>
+      <small>Tech: Python, Web Scraping</small>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Data Analyst Intern — Besant Technologies</h3>
+      <p><em>Aug 2025 – Present</em></p>
+      <ul>
+        <li>Cleaned, transformed, and structured raw datasets using Excel tools.</li>
+        <li>Built interactive dashboards with Pivot Charts and slicers.</li>
+        <li>Performed statistical analysis for actionable insights.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <div class="card">
+      <h3>B.Tech — Computer Science & Engineering</h3>
+      <p>College of Engineering Poonjar (2025) — CGPA: 6.53/10</p>
+      <p>Higher Secondary — S N D P HSS, Udayamperoor (2021) — 88%</p>
+      <p>SSLC — S N D P HSS, Udayamperoor (2018) — 98%</p>
+    </div>
+    <div class="card">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Python and Web Mining — Makonics Infinity Solutions Pvt. Ltd. (2022)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:harinjn1441@gmail.com">harinjn1441@gmail.com</a></p>
+      <p>Phone: +91-9526350759</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/hariniranjans" target="_blank">/hariniranjans</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Hari Niranjan S
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
