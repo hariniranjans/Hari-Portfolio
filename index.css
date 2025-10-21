@@ -1,0 +1,361 @@
+:root {
+  --bg-color: #f8f9fa;
+  --card-color: #ffffff;
+  --border-color: #dee2e6;
+  --text-color: #212529;
+  --text-color-secondary: #6c757d;
+  --accent-color: #007bff;
+  --accent-color-hover: #0056b3;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+p {
+  color: var(--text-color-secondary);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color-hover);
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.2rem 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.logo:hover {
+    color: var(--accent-color);
+}
+
+nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  color: var(--text-color-secondary);
+}
+
+/* Main Content */
+main {
+  padding-top: 80px; /* Header height */
+}
+
+section {
+  padding: 6rem 0;
+}
+section:nth-child(odd) {
+    background-color: var(--card-color);
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-color);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-color-secondary);
+    font-size: 1.5rem;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Card */
+.card {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+/* Skills Section */
+#skills .card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skill-category h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  border-left: 3px solid var(--accent-color);
+  padding-left: 0.75rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills-list span {
+  background-color: #e9ecef;
+  color: var(--text-color-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.project-card p {
+  flex-grow: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.project-tags span {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: var(--accent-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.project-links i {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.5rem;
+}
+
+/* Experience Section */
+#experience .card h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+#experience .card h4 {
+  color: var(--text-color-secondary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+#experience ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+#experience li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+#experience li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Contact Section */
+#contact .card {
+    text-align: center;
+}
+#contact .card p {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  padding: 2.5rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--card-color);
+}
+footer p {
+    color: var(--text-color-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  header nav {
+    display: none; /* For simplicity, hiding nav on mobile. Could be replaced with a hamburger menu. */
+  }
+  section {
+    padding: 4rem 0;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+}
